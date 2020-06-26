@@ -8,8 +8,8 @@ EXPOSE 8081
 
 #copy hello world to docker image from builder image
 
-COPY --from=Maven_Home /target/jb-hello-world-maven-0.1.0.jar /data/jb-hello-world-maven-0.1.0.jar
-
+COPY /target/jb-hello-world-maven-0.1.0.jar /data/jb-hello-world-maven-0.1.0.jar
+#--from=Maven_Home
 #default command
 CMD java -jar /data/jb-hello-world-maven-0.1.0.jar
 
